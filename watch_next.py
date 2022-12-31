@@ -9,14 +9,12 @@ planethulk = nlp("Will he save their world or destroy it? When the Hulk becomes 
 
 #lists 
 movies = []
-movielist = []
 similar_list = []
 end_list = []
 
 def similar(movie, description):
     """the function calculates the similarity between movies and planet hulk"""
     similarity = nlp(description).similarity(planethulk)
-    movielist.append(movie)
     similar_list.append(similarity)
     check = f"{movie},{similarity}"
     check = check.split(",")
